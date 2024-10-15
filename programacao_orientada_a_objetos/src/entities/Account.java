@@ -9,23 +9,18 @@ public class Account {
 	
 	// Constructors
 	
-	public Account() {
+	public Account(Integer number, String holder) {
 	}
 	
-	public Account(Integer number, String holder, Double balance) {
-		super();
+	public Account(Integer number, String holder, Double initialDeposit) {
 		this.number = number;
 		this.holder = holder;
-		this.balance = balance;
+		deposit(initialDeposit);
 	}
 
 	// Getters and Setters
 	public Integer getNumber() {
 		return number;
-	}
-
-	public void setNumber(Integer number) {
-		this.number = number;
 	}
 
 	public String getHolder() {
@@ -39,10 +34,6 @@ public class Account {
 	public Double getBalance() {
 		return balance;
 	}
-
-//	public void setBalance(Double balance) {
-//		this.balance = balance;
-//	};	
 	
 	// Methods
 	public void deposit(double amount) {

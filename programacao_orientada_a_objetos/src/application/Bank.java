@@ -11,21 +11,25 @@ public class Bank {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
-		Account account = new Account();
+		
+		Account account;
 		
 		System.out.print("Enter account number: ");
-		account.setNumber(sc.nextInt());
+		int number = sc.nextInt();
 		sc.nextLine();
 		
 		System.out.print("Enter account holder: ");
-		account.setHolder(sc.nextLine());
+		String holder = sc.nextLine();
 		
 		System.out.print("Is there an initial deposit (y/n)? ");
-		char answer = sc.next().charAt(0);
-		if (answer == 'y') {
+		char response = sc.next().charAt(0);
+		if (response == 'y') {
 			System.out.print("Enter initial deposit value: ");
-			account.deposit(sc.nextDouble());
+			double initialDeposit = sc.nextDouble();
+			account = new Account(number, holder, initialDeposit);
+		}
+		else {
+			account = new Account(number, holder);			
 		}		
 		
 		System.out.println();
