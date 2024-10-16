@@ -15,7 +15,7 @@ public class ProgramaVetor02 {
 		int n = sc.nextInt();
 		ProductVetor02[] vect = new ProductVetor02[n]; // cria vetor com n posições
 		
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) { // ao invés de utilizar n, poderiamos utilizar vect.length
 			sc.nextLine();
 			String name = sc.nextLine();
 			double price = sc.nextDouble();
@@ -23,11 +23,11 @@ public class ProgramaVetor02 {
 		}
 		
 		double sum = 0.0;
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < vect.length; i++) {
 			sum += vect[i].getPrice();
 		}
 		
-		double avg = sum / n;
+		double avg = sum / vect.length;
 		
 		System.out.printf("AVERAGE PRICE = %.2f", avg);
 			

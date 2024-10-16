@@ -1,10 +1,10 @@
 package entities;
 
 public class ProductVetor02 {
-	
+
 	private String name;
 	private double price;
-	
+
 	public ProductVetor02(String name, double price) {
 		this.name = name;
 		this.price = price;
@@ -25,8 +25,5 @@ public class ProductVetor02 {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	
-	
 
 }

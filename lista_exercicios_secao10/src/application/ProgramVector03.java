@@ -24,7 +24,7 @@ public class ProgramVector03 {
 			String name = sc.next();
 			System.out.print("Idade: ");
 			int age = sc.nextInt();
-			System.out.print("Altura: "); // verificar inserção de sc.nextLine();
+			System.out.print("Altura: ");
 			double height = sc.nextDouble();
 			heights[i] = new Heights(name, age, height);
 		}
@@ -42,6 +42,7 @@ public class ProgramVector03 {
 			}
 		}
 
+		System.out.println();
 		System.out.printf("Altura media: %.2f%n", avg);
 		System.out.printf("Pessoas com menos de 16 anos %.1f%%%n", under16 / heights.length * 100);
 
@@ -50,13 +51,6 @@ public class ProgramVector03 {
 				System.out.println(heights[i].getName());
 			}
 		}
-
-//		// TESTES
-//		for (int i = 0; i < heights.length; i++) {
-//			System.out.println(heights[i].getName());
-//			System.out.println(heights[i].getAge());
-//			System.out.println(heights[i].getHeight());
-//		}
 
 		sc.close();
 	}
