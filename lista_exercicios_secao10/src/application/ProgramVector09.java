@@ -35,8 +35,7 @@ public class ProgramVector09 {
 				older = ages[i].getAge();
 				olderName = names[i].getName();
 			}
-		}
-		
+		}		
 		
 		System.out.print("PESSOA MAIS VELHA: " + olderName);		
 
