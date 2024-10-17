@@ -12,6 +12,7 @@ public class Pensionato {
 
 		Quartos[] rooms = new Quartos[10];
 		
+		// nao solicitado no exercicio
 		System.out.println("Free rooms:");
 		System.out.print("Rooms: ");
 		for (int i = 0; i < rooms.length; i++) {
@@ -31,6 +32,7 @@ public class Pensionato {
 			String email = sc.next();
 			System.out.print("Room: ");
 			int room = sc.nextInt();
+			
 			rooms[room] = new Quartos(name, email, room); 
 		}
 		
@@ -44,6 +46,7 @@ public class Pensionato {
 			}
 		}
 		
+		// nao solicitado no exercicio
 		System.out.println("\nFree rooms:");
 		System.out.print("Rooms: ");
 		for (int i = 0; i < rooms.length; i++) {
