@@ -20,7 +20,7 @@ public class Program {
 		
 		int a = 50;
 		Integer i = a; // boxing
-		int b = i; // unboxing - nao necessita casting
+		int b = i; // unboxing - nao necessita casting; aceita expressão. Ex: int b = i * 10;
 		
 		System.out.println("A..... = " + a + " > tipo valor");
 		System.out.println("I..... = " + i + " > tipo referencia; boxing");
