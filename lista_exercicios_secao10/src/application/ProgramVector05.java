@@ -3,35 +3,38 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Position;
+
 public class ProgramVector05 {
 
 	public static void main(String[] args) {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
-		System.out.print("Quantos valores vai ter cada vetor? ");
+		
+		System.out.print("Quantos numeros voce vai digitar? ");
 		int n = sc.nextInt();
 		
-		int[] vectA = new int[n];
-		int[] vectB = new int[n];
+		Position[] positions = new Position[n];
 		
-		System.out.println("Digite os valores de A:");
-		for (int i = 0; i < vectA.length; i++) {
-			vectA[i] = sc.nextInt();
+		for (int i = 0; i < positions.length; i++) {
+			System.out.print("Digite um numero: ");
+			double p = sc.nextDouble();
+			positions[i] = new Position(p);
 		}
 		
-		System.out.println("Digite os valores de B:");
-		for (int i = 0; i < vectB.length; i++) {
-			vectB[i] = sc.nextInt();
+		double maiorNum = 0.0;
+		int maiorPosition = 0;
+		for (int i = 0; i < positions.length; i++) {
+			if (positions[i].getNum() > maiorNum) {
+				maiorNum = positions[i].getNum();
+				maiorPosition = i;
+			}
 		}
 		
-		System.out.println("VETOR RESULTANTE:");
-		for (int i = 0; i < vectA.length; i++) {
-			int somaPosicoesVetores = 0;
-			somaPosicoesVetores = vectA[i] + vectB[i];
-			System.out.println(somaPosicoesVetores);
-		}
+		System.out.println();
+		System.out.printf("MAIOR VALOR = %.1f%n", maiorNum);
+		System.out.printf("POSICAO DO MAIOR VALOR = %d", maiorPosition);
 		
 		sc.close();
 	}
