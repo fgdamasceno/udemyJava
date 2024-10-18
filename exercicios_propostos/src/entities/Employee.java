@@ -36,8 +36,8 @@ public class Employee {
 		return salary;
 	}
 
-	public Double increaseSalary(double salary, double percentage) {
-		return this.salary = salary * (1 + percentage / 100);
+	public Double increaseSalary(double percentage) {
+		return salary *= 1 + percentage / 100;
 	}
 
 	@Override

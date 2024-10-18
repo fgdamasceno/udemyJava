@@ -20,7 +20,6 @@ public class ProgramList {
 		List<Employee> employee = new ArrayList<>();
 
 		for (int i = 1; i <= n; i++) {
-			sc.nextLine();
 			System.out.println();
 			System.out.println("Employee #" + i);
 			System.out.print("Id: ");
@@ -42,7 +41,7 @@ public class ProgramList {
 
 		for (Employee e : employee) {
 			if (e.getId() == id) {
-				e.increaseSalary(e.getSalary(), increasePercentage);
+				e.increaseSalary(increasePercentage);
 			}
 			else {
 				System.out.println("This id does not exist");
