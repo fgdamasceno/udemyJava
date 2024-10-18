@@ -1,11 +1,11 @@
 package entities;
 
-public class Employee {	
-		
+public class Employee {
+
 	private Integer id;
 	private String name;
 	private Double salary;
-	
+
 	public Employee(Double salary) {
 		this.salary = salary;
 	}
@@ -35,7 +35,7 @@ public class Employee {
 	public Double getSalary() {
 		return salary;
 	}
-	
+
 	public Double increaseSalary(double salary, double percentage) {
 		return this.salary = salary * (1 + percentage / 100);
 	}
@@ -44,11 +44,5 @@ public class Employee {
 	public String toString() {
 		return id + ", " + name + ", " + String.format("%.2f", salary);
 	}
-
-//	public void setSalary(Double salary) {
-//		this.salary = salary;
-//	}
-	
-	
 
 }

@@ -16,9 +16,9 @@ public class ProgramList {
 
 		System.out.print("How many employees will be registered? ");
 		int n = sc.nextInt();
-		
+
 		List<Employee> employee = new ArrayList<>();
-		
+
 		for (int i = 1; i <= n; i++) {
 			sc.nextLine();
 			System.out.println();
@@ -30,32 +30,31 @@ public class ProgramList {
 			String name = sc.nextLine();
 			System.out.print("Salary: ");
 			Double salary = sc.nextDouble();
-			
-			employee.add(new Employee(id, name, salary));			
+
+			employee.add(new Employee(id, name, salary));
 		}
-		
-		
+
 		System.out.print("\nEnter the employee id that will have salary increase: ");
 		int id = sc.nextInt();
-		
+
 		System.out.print("Enter the percentage: ");
 		double increasePercentage = sc.nextDouble();
-		
-		
+
 		for (Employee e : employee) {
 			if (e.getId() == id) {
 				e.increaseSalary(e.getSalary(), increasePercentage);
 			}
-		}	
-		
-		
+			else {
+				System.out.println("This id does not exist");
+			}
+		}
+
 		System.out.println();
 		System.out.println("List of employees:");
 		for (Employee e : employee) {
 			System.out.println(e);
 		}
-		
-		
+
 		sc.close();
 	}
 
