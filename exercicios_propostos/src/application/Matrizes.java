@@ -28,8 +28,9 @@ public class Matrizes {
 			System.out.println();
 		}
 
+		
+		// RECEBE UM NUMERO DA MATRIZ E VERIFICA QUAIS ESTAO À SUA VOLTA
 		int x = sc.nextInt();
-
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
 				if (x == matriz[i][j]) {
