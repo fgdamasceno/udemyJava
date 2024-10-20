@@ -159,6 +159,11 @@ public class Program {
 		// Instant
 		Duration d3 = Duration.between(pastDaysInstant, d03);
 		System.out.println("DURAÇÃO = " + d3.toDays() + " DIAS");
+		/*
+		 * OBS.: OS ARGUMENTO EM .between(a1, a2) PODEM SER LANCADOS INVERTIDOS
+		 * PORÉM, DEPENDENDO DA ORDER MAIOR VALOR x MENOR VALOR, O RESULTADO
+		 * PODE RETORNAR COM VALOR NEGATIVO
+		 */
 
 		// ---> OUTROS <---
 
