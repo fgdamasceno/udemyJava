@@ -148,7 +148,8 @@ public class Program {
 		
 		// ---> DURATION <---
 		// LocalDate
-		// Duration d1 = Duration.between(pastWeekLocalDate.atTime(0, 0), d01.atTime(0, 0)); // ESTE E O DE BAIXO EXIBEM O MESMO RESULTADO
+		// Duration d1 = Duration.between(pastWeekLocalDate.atTime(0, 0), d01.atTime(0, 0)); 
+		// ESTE ACIMA E O DE BAIXO EXIBEM O MESMO RESULTADO
 		Duration d1 = Duration.between(pastWeekLocalDate.atStartOfDay(), d01.atStartOfDay());
 		System.out.println("DURAÇÃO = " + d1.toDays() + " DIAS");;		
 		
