@@ -39,6 +39,20 @@ public class Program {
 			acc5.updateBalance();
 			System.out.println("UPDATE REALIZADO");
 		}
+		
+		
+		// @Override CLASS
+		Account acc6 = new Account(1005, "Linus", 1000.00);
+		acc6.withdraw(200.00);
+		System.out.println("Withdraw acc6 = $" + acc6.getBalance()); // 1000.00 - (200.00 + 5.00) = 795.00
+		
+		Account acc7 = new SavingsAccount(1006, "Jonas", 1000.00, 0.01);
+		acc7.withdraw(200.00);
+		System.out.println("Withdraw acc7 = $" + acc7.getBalance()); // 1000.00 - (200.00) = 800.00
+		
+		Account acc8 = new BusinessAccount(1007, "Bob", 1000.00, 500.00);
+		acc8.withdraw(200);
+		System.out.println("Withdraw acc8 = $" + acc8.getBalance()); // 1000.00 - (200.00 + 5.00) - 2.00 = 793.00
 
 	}
 
