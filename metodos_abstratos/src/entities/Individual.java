@@ -25,11 +25,11 @@ public class Individual extends TaxPayer {
 	public double taxCalculator() {
 		double tax = 0.0;
 		
-		if (super.getAnualIncome() < 20000.0) {
-			tax = super.getAnualIncome() * 0.15;
+		if (super.getAnnualIncome() < 20000.0) {
+			tax = super.getAnnualIncome() * 0.15;
 		}
 		else {
-			tax = super.getAnualIncome() * 0.25;
+			tax = super.getAnnualIncome() * 0.25;
  		}
 		
 		if (healthExpediture > 0) {

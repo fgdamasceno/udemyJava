@@ -3,16 +3,16 @@ package entities;
 public abstract class TaxPayer {
 	
 	private String name;
-	private Double anualIncome;
+	private Double annualIncome;
 	
 	public TaxPayer() {
 		super();
 	}
 	
-	public TaxPayer(String name, Double anualIncome) {
+	public TaxPayer(String name, Double annualIncome) {
 		super();
 		this.name = name;
-		this.anualIncome = anualIncome;
+		this.annualIncome = annualIncome;
 	}
 	
 	public String getName() {
@@ -23,12 +23,12 @@ public abstract class TaxPayer {
 		this.name = name;
 	}
 
-	public Double getAnualIncome() {
-		return anualIncome;
+	public Double getAnnualIncome() {
+		return annualIncome;
 	}
 
-	public void setAnualIncome(Double anualIncome) {
-		this.anualIncome = anualIncome;
+	public void setAnnualIncome(Double anualIncome) {
+		this.annualIncome = anualIncome;
 	}
 
 	public abstract double taxCalculator();

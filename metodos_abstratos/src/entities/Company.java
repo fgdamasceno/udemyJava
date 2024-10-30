@@ -8,8 +8,8 @@ public class Company extends TaxPayer {
 		super();
 	}
 	
-	public Company(String name, Double anualIncome, int employeeQuantity) {
-		super(name, anualIncome);
+	public Company(String name, Double annualIncome, int employeeQuantity) {
+		super(name, annualIncome);
 		this.employeeQuantity = employeeQuantity;
 	}
 	
@@ -24,12 +24,11 @@ public class Company extends TaxPayer {
 	@Override
 	public double taxCalculator() {
 		double tax = 0.0;
-		
 		if (employeeQuantity < 10) {
-			tax = super.getAnualIncome() * 0.16;
+			tax = super.getAnnualIncome() * 0.16;
 		}
 		else {
-			tax = super.getAnualIncome() * 0.14;
+			tax = super.getAnnualIncome() * 0.14;
 		}
 		
 		return tax;
