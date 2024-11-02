@@ -37,10 +37,10 @@ public class Program {
 			System.out.print("Check-out date (dd/MM/yyyy): ");
 			checkOut = sdf.parse(sc.next());
 			
-			// SOLUÇÃO MUITO RUIM
+			// SOLUCAO MUITO RUIM
 			/*
 			
-			Date now = new Date();
+			Date now = new Date(); 
 			if (checkIn.before(now) || checkOut.before(now)) {
 				System.out.println("Error in reservation: Reservation dates for update must be future dates.");
 			}
@@ -53,16 +53,24 @@ public class Program {
 			}
 			
 			*/
-			// FIM SOLUÇÃO MUITO RUIM
-			// ESTA SOLUÇÃO DEVERIA ESTAR NA CLASSE 'RESERVATION', RESPONSAVEL PELA RESERVA, (delegação) NAO NO PROGRAMA PRINCIPAL
+			// FIM SOLUCAO MUITO RUIM
+			// ESTA SOLUCAO DEVERIA ESTAR NA CLASSE 'RESERVATION', RESPONSAVEL PELA RESERVA, (delegacao) NAO NO PROGRAMA PRINCIPAL
 			
-			// =========================================================================================
+			// =========================================================================================						
 			
-			// SOLUÇÃO RUIM
+			// PARTE DA SOLUCAO RUIM
+			String error = reservation.updateDates(checkIn, checkOut);
+			if (error != null) {
+				System.out.println("Error in reservation: " + error);
+			}
+			else {
+				System.out.println("Reservation: " + reservation);				
+			}
+			// FIM DA PARTE DA SOLUCAO RUIM
 			
 			
-			reservation.updateDates(checkIn, checkOut);
-			System.out.println("Reservation: " + reservation);			
+//			reservation.updateDates(checkIn, checkOut);
+//			System.out.println("Reservation: " + reservation);			
 		}
 		
 		
