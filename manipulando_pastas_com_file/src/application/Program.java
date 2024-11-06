@@ -39,12 +39,8 @@ public class Program {
 		
 		// ACESSAR SOMENTE O NOME DO ARQUIVO, E NÃO SEU CAMINHO COMPLETO
 		System.out.println("getName: " + fiPath.getName()); // get.Name() RETORNA SOMENTE O NOME DO ARQUIVO
-		System.out.println("getName: " + fiPath.getPath()); // get.Path() RETORNA O CAMINHO COMPLETO PARA O ARQUIVO
-		System.out.println("getName: " + fiPath.getParent()); // get.Path() RETORNA O CAMINHO COMPLETO PARA O ARQUIVO
-		
-		
-		
-		
+		System.out.println("getPath: " + fiPath.getPath()); // get.Path() RETORNA O CAMINHO COMPLETO PARA O ARQUIVO
+		System.out.println("getParent: " + fiPath.getParent()); // get.Parent() RETORNA SOMENTE O CAMINHO PARA O ARQUIVO		
 		
 		sc.close();
 	}
